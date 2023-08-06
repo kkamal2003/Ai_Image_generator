@@ -1,6 +1,6 @@
 import React ,{ useState }from 'react'
 import { json, useNavigate } from 'react-router-dom';
-
+import * as dotenv from 'dotenv';
 import { preview } from '../assets';
 import { getRandomPrompt } from '../utils';
 import { FormField , Loader } from '../components';
@@ -30,7 +30,7 @@ const CreatePost = () => {
             method: "POST",
             headers: {
               "content-type":"application/json",
-              "Authorization": "Bearer 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",
+              "Authorization": `Bearer ${process.env.HUGGING_API_TOKEN}`,
               },
             body: JSON.stringify({ inputs: prompt}), // Ensure to send the prompt data properly
           }
