@@ -30,7 +30,7 @@ const CreatePost = () => {
             method: "POST",
             headers: {
               "content-type":"application/json",
-              "Authorization": `Bearer ${process.env.HUGGING_API_TOKEN}`,
+              "Authorization": "Bearer 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",
               },
             body: JSON.stringify({ inputs: prompt}), // Ensure to send the prompt data properly
           }
