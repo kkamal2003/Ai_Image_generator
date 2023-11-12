@@ -24,13 +24,12 @@ const CreatePost = () => {
         setgeneratingImg(true);
         const prompt = form.prompt;
         const response = await fetch(
-          "https://api-inference.huggingface.co/models/runwayml/stable-diffusion-v1-5",
-          //"https://api-inference.huggingface.co/models/CompVis/stable-diffusion-v1-4",
+          "ENTER YOUR API LINK",
           {
             method: "POST",
             headers: {
               "content-type":"application/json",
-              "Authorization": "Bearer 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",
+              "Authorization": "ENTER YOUR AUTHORIZATION TOKEN",
               },
             body: JSON.stringify({ inputs: prompt}), // Ensure to send the prompt data properly
           }
